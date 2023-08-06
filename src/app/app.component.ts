@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'emmy-cupcakes';
+  pageSelected = 'home'
+
+  onSelectPage(event: string){
+    this.pageSelected = event;
+    console.log(this.pageSelected);
+  }
 }

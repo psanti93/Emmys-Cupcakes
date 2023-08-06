@@ -8,6 +8,7 @@ import { OrderItemComponent } from './orders/order-list/order-item/order-item.co
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CupcakesComponent } from './cupcakes/cupcakes.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CupcakesComponent } from './cupcakes/cupcakes.component';
     OrderItemComponent,
     HeaderComponent,
     FooterComponent,
-    CupcakesComponent
+    CupcakesComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule
