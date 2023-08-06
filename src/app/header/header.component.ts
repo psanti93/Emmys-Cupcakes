@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +7,15 @@ import { Component } from '@angular/core';
 })
 
 export class HeaderComponent {
+  @Output() selectedPage = new EventEmitter<string>();
   collapsed = true;
 
   onPrintOut(){
     console.log("collapsed is:" + this.collapsed)
+  }
+
+  onSelected(page:string){
+      this.selectedPage.emit(page);
   }
 
 }

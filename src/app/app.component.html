@@ -1,13 +1,16 @@
-<app-header></app-header>
+<app-header (selectedPage)="onSelectPage($event)"></app-header>
 <div class="container">
   <div class="row">
+    <app-home-page *ngIf="pageSelected ==='home'"></app-home-page>
+  </div>
+  <div class="row">
     <div class="col-md-12">
-      <app-cupcakes></app-cupcakes>
+      <app-cupcakes *ngIf="pageSelected === 'cupcakes'"></app-cupcakes>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12">
-      <app-orders></app-orders>
+      <app-orders *ngIf="pageSelected === 'orders'"></app-orders>
     </div>
   </div>
 </div>
