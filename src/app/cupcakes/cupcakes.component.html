@@ -1,11 +1,17 @@
 <div class="container-fluid">
- <h1> Choose your Cupcakes!</h1>
+ <h1 class="text-center"> Choose your Cupcakes!</h1>
  <hr>
  <div class="row">
   <div class="col-xs-5">
-    <ul class="list-group">
-      <li class="list-group-item">Some Cupcake</li>
-     </ul>
+      <a href="#" class="list-group-item clearfix" *ngFor="let cupcake of cupcakes">
+        <div class="pull-left">
+          <h4 class="list-group-item-heading">{{cupcake.name}}</h4>
+          <p class="list-group-item-text">{{cupcake.description}}</p>
+        </div>
+        <span class="pull-right">
+          <img src="{{cupcake.image}}" alt="{{cupcake.name}}" class="img-responsive" style="max-height: 100px;">
+        </span>
+      </a>
   </div>
 </div>
 </div>
