@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Cupcake } from 'src/app/cupcakes/cupcake.model';
 
 @Component({
   selector: 'app-order-list',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./order-list.component.css']
 })
 export class OrderListComponent {
-
+  cupcake?: Cupcake
 }
